@@ -5,6 +5,7 @@ import io.eventuate.tram.events.subscriber.annotations.EventuateDomainEventHandl
 import org.springframework.aop.support.AopUtils;
 import org.springframework.beans.BeansException;
 import org.springframework.beans.factory.config.BeanPostProcessor;
+import org.springframework.context.annotation.Lazy;
 import org.springframework.core.MethodIntrospector;
 
 import java.lang.reflect.Method;
@@ -16,7 +17,7 @@ public class EventuateDomainEventHandlerBeanPostProcessor implements BeanPostPro
 
   private final EventuateDomainEventDispatcher eventuateDomainEventDispatcher;
 
-  public EventuateDomainEventHandlerBeanPostProcessor(EventuateDomainEventDispatcher eventuateDomainEventDispatcher) {
+  public@Lazy EventuateDomainEventHandlerBeanPostProcessor(EventuateDomainEventDispatcher eventuateDomainEventDispatcher) {
     this.eventuateDomainEventDispatcher = eventuateDomainEventDispatcher;
   }
 
