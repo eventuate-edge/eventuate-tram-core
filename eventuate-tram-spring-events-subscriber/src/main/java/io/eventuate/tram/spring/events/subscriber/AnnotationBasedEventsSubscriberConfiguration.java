@@ -11,13 +11,13 @@ public class AnnotationBasedEventsSubscriberConfiguration {
 
 
   @Bean
-  public EventuateDomainEventDispatcher eventuateDomainEventDispatcher(DomainEventDispatcherFactory domainEventDispatcherFactory) {
+  static EventuateDomainEventDispatcher eventuateDomainEventDispatcher(DomainEventDispatcherFactory domainEventDispatcherFactory) {
     return new EventuateDomainEventDispatcher(domainEventDispatcherFactory);
   }
 
   @Bean
   @Role(BeanDefinition.ROLE_INFRASTRUCTURE)
-  public EventuateDomainEventHandlerBeanPostProcessor eventuateDomainEventHandlerBeanPostProcessor(EventuateDomainEventDispatcher eventuateDomainEventDispatcher) {
+  static EventuateDomainEventHandlerBeanPostProcessor eventuateDomainEventHandlerBeanPostProcessor(EventuateDomainEventDispatcher eventuateDomainEventDispatcher) {
     return new EventuateDomainEventHandlerBeanPostProcessor(eventuateDomainEventDispatcher);
   }
 }
