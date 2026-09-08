@@ -5,6 +5,7 @@ dependencies {
     api "io.eventuate.common:eventuate-common-json-mapper:$eventuateCommonVersion"
 
     api "jakarta.annotation:jakarta.annotation-api:$jakartaAnnotationVersion"
+    implementation "org.springframework:spring-context:7.0.9"
 }
 tasks.withType(Test).configureEach {
     useJUnitPlatform()

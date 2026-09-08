@@ -26,6 +26,7 @@ import java.lang.annotation.Target;
  */
 @Retention(RetentionPolicy.RUNTIME)
 @Target(ElementType.METHOD)
+@org.springframework.context.event.EventListener
 public @interface EventuateDomainEventHandler {
 
   /**

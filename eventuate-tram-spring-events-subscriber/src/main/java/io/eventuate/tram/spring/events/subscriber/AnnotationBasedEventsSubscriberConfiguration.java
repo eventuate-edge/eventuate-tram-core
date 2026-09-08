@@ -15,7 +15,7 @@ public class AnnotationBasedEventsSubscriberConfiguration {
   }
 
   @Bean
-  public static EventuateDomainEventHandlerBeanPostProcessor eventuateDomainEventHandlerBeanPostProcessor( @Lazy EventuateDomainEventDispatcher eventuateDomainEventDispatcher) {
+  public static EventuateDomainEventHandlerBeanPostProcessor eventuateDomainEventHandlerBeanPostProcessor(@Lazy EventuateDomainEventDispatcher eventuateDomainEventDispatcher) {
     return new EventuateDomainEventHandlerBeanPostProcessor(eventuateDomainEventDispatcher);
   }
 }
