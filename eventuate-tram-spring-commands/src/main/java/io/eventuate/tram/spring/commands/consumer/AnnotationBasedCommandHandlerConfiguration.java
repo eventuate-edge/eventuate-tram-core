@@ -10,7 +10,7 @@ public class AnnotationBasedCommandHandlerConfiguration {
 
 
     @Bean
-    public EventuateCommandHandlerBeanPostProcessor eventuateCommandHandlerBeanPostProcessor(@Lazy EventuateCommandDispatcher eventuateCommandDispatcher) {
+    public static EventuateCommandHandlerBeanPostProcessor eventuateCommandHandlerBeanPostProcessor(@Lazy EventuateCommandDispatcher eventuateCommandDispatcher) {
         return new EventuateCommandHandlerBeanPostProcessor(eventuateCommandDispatcher);
     }
 

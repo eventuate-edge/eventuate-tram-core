@@ -3,7 +3,6 @@ dependencies {
     api project(":eventuate-tram-messaging")
 
     api "io.eventuate.common:eventuate-common-json-mapper:$eventuateCommonVersion"
-    api "org.springframework:spring-context:${springFrameworkVersion}"
 
     testImplementation project(":eventuate-tram-in-memory")
     testImplementation "io.eventuate.util:eventuate-util-test:$eventuateUtilVersion"
